@@ -1,0 +1,8 @@
+#!/bin/tcsh -f
+
+# CMSC 216, Spring 2023
+#
+
+cat negate_bigger_driver.s negate_bigger.s > negate_bigger_prog.s
+spim -file negate_bigger_prog.s < negate_bigger_test1.input | tail -n +2
+rm -f negate_bigger_prog.s

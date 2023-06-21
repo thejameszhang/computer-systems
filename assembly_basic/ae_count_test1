@@ -1,0 +1,8 @@
+#!/bin/tcsh -f
+
+# CMSC 216, Spring 2023
+#
+
+cat ae_count_driver.s ae_count.s > ae_count_prog.s
+spim -file ae_count_prog.s < ae_count_test1.input | tail -n +2
+rm -f ae_count_prog.s
